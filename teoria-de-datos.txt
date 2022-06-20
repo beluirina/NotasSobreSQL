@@ -1,0 +1,107 @@
+
+• conceptos de char, varchar, int, decimal, bit, tablas
+ • ¿Qué es un valor null? Es la ausencia de dato
+• Not null: obligatoria —> se ingresa un dato si o si
+• Null: opcional —> se le puede ingresar un dato o dejar vacía
+• Normalización de tablas
+• Clave primaria (primary key, PK)
+• Clave foránea (foreign key, FK)
+• Tipos de relaciones:
+ - 1 a N (uno a muchos, ejemplo Artista tiene muchos Álbumes);
+- N a N (muchos a muchos, ejemplo Artistas tienen muchas Canciones);
+- 1 a 1 (uno a uno, ejemplo Artista tiene Información de Contacto);
+- auto-referenciales (ejemplo, un Artista se relaciona a un Artista)
+
+Programa = automata
+Base de datos = repositorio de informacion
+
+Servidor -> red conectado a un servidor (servicio)
+
+Sistema de gestion de base de datos (aplicacion)
+
+"En todo hay un sistema" -> de TG (teoria general) de sistemas SURGE - TG de la informacion
+
+Data (ej. 40) -> informacion(sea 40.. Kg, km, etc = informacion semantica/contexto) -> conocimiento relacionado.
+
+cuadro/illustracion de multiples clientes /usuarios web (donde se dibuja en la pantalla) conectados a un servidor web (donde se corre/elabora) <---> base de datos
+
+Hay conecciones a una base de datos a un servidor o al mismo dispositivo.
+
+COMPONENTES (base de datos)
+Cliente>>
+(Software de administracion)
+>>> SGBD
+(Gestor de base de datos en servidor local, remoto o cloud/SaaS)
+- se trata de garantizar flexibilidad e independencia de como se puede introducir el input
+- garantiza que los datos seran guardados
+- evita la redundancia
+>>>>>Datos
+
+Datos: estaticos (no se modifican), dinamicos (pueden ser modificados) y calculados (calculados a partir de otros datos - recalculables)
+[Se destaco que es dificil differenciar bien el estatico del dinamico, ya que todo puede ser modificable]
+
+· 2 ejercicios: diseño de tablas de informacion para contactos y libros.
+Se menciono:
+- utilizacion de id
+- evitar null
+- evitar repeticiones
+- buscador
+
+Campos clave -> algo unico inherente al objeto que se esta grabando
+-> possiblemente DNI pero hay possibilidad de error humano (en tal caso mejor usar ID
+
+PERFORMANCE vs ALMACENAMIENTO (debate) ¿Cual sacrificar?
+Tener varios indices: es un problema al actualizar un dato por que hay que hacerlo en todos los indices. Tambien tiene un costo en el almacenamiento, pero mejor performance.
+
+Objetivo: menor cantidad de lecturas de bloque
+
+
+Terminos e otras ideas:
+IP - identificador unico
+Data Types
+MySQL vs SQL - BD relacional -> intuitivo maneja tablas.
+Entrada = registro = linea
+Metadata: informacion para organizar informacion
+Indices primarios: que vayan al bloque.
+Foreign Key:  no obligatorio. Tiene un costo administrativo. Se basa en el algebra relacional.
+Normalizar: seria la redundancia. Contenido descriptivo dentro de los datos. [Su opuesto: algebra relacional = SQL]
+Algebra relacional: SQL esta basado en AR. Es la manera abstracta de relacionar datos.
+
+
+
+
+Herramientas para manejo de SQL
+- SQL Server Express(Recomendado para prácticas)
+- SQL Server Management Studio(Manejo del Servidor)
+ Formas de crear tablas
+Scrip de creación ("escrito a mano")
+Edición por Software
+(No recuerdo la 3ra)
+
+- Utilización de la herramienta "Use", se utiliza para cambiar de carpeta a través del script
+
+
+- Se nos especificó que los cilindros son la ilustración de cada Base de Datos
+- Dentro de la BD podemos encontrar carpetas y las respectivas tablas
+
+- SQL es un lenguaje case insensitive
+
+- En el diagrama de sql la coneccion es (muchos) oo---🔑 (uno/PK)
+
+- DBO(database owner) -- SCHEMA (lógica para agrupar tablas)
+
+El ingreso puede ser: NULL o NOT NULL
+
+"New query" -> donde se codea con lenguaje sql. Aunque muchas cosas se pueden hacer manualmente
+
+Identity specification -- se puede poner de diferentes intervalos para - por ejemplo - agregar items en el medio para cuando se quiere agregar una parte de un proceso sin la necesidad de borrar o modificar un item ya existente
+
+Click derecho - relationships.
+
+TCP - APIS
+
+Conceptos para estudiar:
+- polimorfismo
+- OOP
+
+databases> carpeta > tasks > generate scripts. = para generar un backup con sql.
